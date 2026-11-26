@@ -144,6 +144,10 @@ export default function ExchangeAdminPage() {
   const [aiLoading, setAiLoading] = useState(false);
   const [aiError, setAiError] = useState('');
   const [aiLoaded, setAiLoaded] = useState(false);
+  // 2026-11-26: 가입자 수 — Exchange 프로필(설정 완료자)만 세면 가입만 하고 설정을 안 끝낸
+  // 계정이 0으로 보였다. 서버 API(Admin SDK)로 전체 가입 계정 수를 따로 보여준다.
+  const [signups, setSignups] = useState<{ accounts: number; withProfileDoc: number; new7d: number; muntuzVisitors: number } | null>(null);
+  const [signupsError, setSignupsError] = useState('');
 
   const [userSearch, setUserSearch] = useState('');
   const [userStatusFilter, setUserStatusFilter] = useState<'all' | ProfileStatus>('all');
@@ -162,7 +166,29 @@ export default function ExchangeAdminPage() {
     setLoadError('');
     setReportsError('');
     setWaitlistError('');
+    setSignupsError('');
     (async () => {
+      try {
+        const token = await user!.getIdToken();
+        const res = await fetch('/api/admin/users', { headers: { Authorization: `Bearer ${token}` }, cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = (await res.json()) as {
+          users: { createdAt: string; muntuzVisitDays: number }[];
+          authTotal: number | null;
+        };
+        if (cancelled) return;
+        const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+        setSignups({
+          accounts: typeof data.authTotal === 'number' ? data.authTotal : data.users.length,
+          withProfileDoc: data.users.length,
+          new7d: data.users.filter((u) => u.createdAt && Date.parse(u.createdAt) >= weekAgo).length,
+          muntuzVisitors: data.users.filter((u) => (u.muntuzVisitDays || 0) > 0).length,
+        });
+      } catch (err) {
+        if (cancelled) return;
+        setSignups(null);
+        setSignupsError('가입자 수를 불러오지 못했습니다 (' + String((err as Error).message || err) + ').');
+      }
       try {
         const snap = await getDocs(query(collection(db, 'exchange_profiles'), limit(200)));
         if (cancelled) return;
@@ -431,9 +457,11 @@ export default function ExchangeAdminPage() {
 
       {tab === 'dashboard' && (
         <section>
-          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
             {[
-              { label: 'Exchange profiles', value: stats.totalProfiles },
+              { label: 'Signed-up accounts (MunTalk + Muntuz)', value: signups ? signups.accounts : '—' },
+              { label: 'New signups, last 7 days', value: signups ? signups.new7d : '—' },
+              { label: 'Exchange profiles (setup finished)', value: stats.totalProfiles },
               { label: 'Active in last 7 days', value: stats.new7d },
               { label: 'Open reports', value: stats.openReports },
               { label: 'Waitlist total', value: stats.waitlistTotal },
@@ -447,6 +475,16 @@ export default function ExchangeAdminPage() {
           {stats.pausedOrBanned > 0 && (
             <p className="mt-3 text-sm font-semibold text-amber-700">
               {stats.pausedOrBanned} profile(s) currently paused or banned.
+            </p>
+          )}
+          <p className="mt-3 text-xs text-slate-500">
+            One login works on both sites, so signed-up accounts include MunTalk users.
+            {signups && ` ${signups.muntuzVisitors} of them visited muntuz.com since visit tracking started (2026-11-26).`}
+            {' '}An account appears under Exchange profiles only after finishing Exchange setup.
+          </p>
+          {signupsError && (
+            <p className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800">
+              {signupsError}
             </p>
           )}
           {loadingData && <p className="mt-4 text-sm text-slate-500">Loading…</p>}

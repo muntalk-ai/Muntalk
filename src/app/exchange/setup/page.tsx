@@ -33,6 +33,8 @@ import {
   LANGUAGES,
   LEVELS,
   ageBandForAge,
+  missingRequiredFields,
+  type RequiredField,
   calcAge,
   defaultExchangeProfileForm,
   loadExchangeProfile,
@@ -59,6 +61,16 @@ const BIO_EXAMPLES = [
   "I'm here to practice speaking and make new friends around the world.",
 ];
 
+// Required-field marker and per-field error (2026-11-26).
+function Req() {
+  return <span className="text-red-600" aria-hidden="true"> *</span>;
+}
+function FieldError({ msg }: { msg?: string }) {
+  if (!msg) return null;
+  return <span role="alert" className="mt-1 block text-xs font-semibold text-red-600">{msg}</span>;
+}
+const errCls = (on: boolean) => (on ? ' border-red-400 ring-2 ring-red-100' : '');
+
 export default function ExchangeSetupPage() {
   const router = useRouter();
   const { user, loading: authLoading } = useAuth();
@@ -69,6 +81,13 @@ export default function ExchangeSetupPage() {
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState('');
   const [saveFailed, setSaveFailed] = useState('');
+  // 2026-11-26: required fields — per-field errors, shown after a save attempt
+  // and cleared field by field as the user fills them in.
+  const [fieldErrors, setFieldErrors] = useState<Partial<Record<RequiredField, string>>>({});
+  const [triedSave, setTriedSave] = useState(false);
+  useEffect(() => {
+    if (triedSave) setFieldErrors(missingRequiredFields(form, { existingAgeBand: savedAgeBand }));
+  }, [form, triedSave, savedAgeBand]);
 
   // Prefill from a saved profile (e.g. a returning user who never
   // finished setup, or someone editing via this page instead of the
@@ -125,11 +144,19 @@ export default function ExchangeSetupPage() {
     if (!user || saving) return;
     setSaveError('');
     setSaveFailed('');
+    setTriedSave(true);
+    const missing = missingRequiredFields(form, { existingAgeBand: savedAgeBand });
+    setFieldErrors(missing);
+    if (Object.keys(missing).length > 0) {
+      setSaveError('Please fill in all required fields (marked *).');
+      return;
+    }
     setSaving(true);
-    const result = await saveExchangeProfile(user.uid, form);
+    const result = await saveExchangeProfile(user.uid, form, { existingAgeBand: savedAgeBand });
     setSaving(false);
     if (result.ok === false) {
       if (result.error === 'validation') {
+        if (result.fieldErrors) setFieldErrors(result.fieldErrors);
         setSaveError(result.message || 'Could not save your profile.');
       } else if (result.error === 'permission-denied') {
         setSaveFailed('Could not save: Exchange profile permissions are not published yet. Your answers are kept on this page.');
@@ -180,7 +207,7 @@ export default function ExchangeSetupPage() {
       <main className="mx-auto max-w-2xl px-4 py-6 pb-16">
         <h1 className="text-xl font-extrabold">Set up your Exchange profile</h1>
         <p className="mt-1 text-sm text-slate-500">
-          Partners see your nickname, languages, level, interests, goal, age band and country. Your exact date of
+          Fields marked <span className="text-red-600">*</span> are required. Partners see your nickname, languages, level, interests, goal, age band and country. Your exact date of
           birth is never shown to anyone.
         </p>
 
@@ -229,39 +256,49 @@ export default function ExchangeSetupPage() {
             )}
             <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
               <label className="block text-sm font-semibold">
-                Nickname (shown to partners)
+                Nickname (shown to partners)<Req />
                 <input
                   value={form.nickname}
                   onChange={(e) => setForm((cur) => ({ ...cur, nickname: e.target.value }))}
                   placeholder="Pick a nickname — not your real name"
                   maxLength={40}
-                  className={inputCls}
+                  required
+                  aria-required="true"
+                  aria-invalid={!!fieldErrors.nickname}
+                  className={inputCls + errCls(!!fieldErrors.nickname)}
                 />
+                <FieldError msg={fieldErrors.nickname} />
               </label>
               <div className="mt-3 grid gap-3 sm:grid-cols-3">
                 <label className="block text-sm font-semibold">
-                  Native language
-                  <select value={form.nativeLang} onChange={(e) => setForm((cur) => ({ ...cur, nativeLang: e.target.value }))} className={inputCls}>
+                  Native language<Req />
+                  <select value={form.nativeLang} onChange={(e) => setForm((cur) => ({ ...cur, nativeLang: e.target.value }))} required aria-required="true" aria-invalid={!!fieldErrors.nativeLang} className={inputCls + errCls(!!fieldErrors.nativeLang)}>
+                    <option value="">Select a language</option>
                     {LANGUAGES.map((l) => (
                       <option key={l}>{l}</option>
                     ))}
                   </select>
+                  <FieldError msg={fieldErrors.nativeLang} />
                 </label>
                 <label className="block text-sm font-semibold">
-                  Learning
-                  <select value={form.targetLang} onChange={(e) => setForm((cur) => ({ ...cur, targetLang: e.target.value }))} className={inputCls}>
+                  Learning<Req />
+                  <select value={form.targetLang} onChange={(e) => setForm((cur) => ({ ...cur, targetLang: e.target.value }))} required aria-required="true" aria-invalid={!!fieldErrors.targetLang} className={inputCls + errCls(!!fieldErrors.targetLang)}>
+                    <option value="">Select a language</option>
                     {LANGUAGES.map((l) => (
                       <option key={l}>{l}</option>
                     ))}
                   </select>
+                  <FieldError msg={fieldErrors.targetLang} />
                 </label>
                 <label className="block text-sm font-semibold">
-                  Level
-                  <select value={form.level} onChange={(e) => setForm((cur) => ({ ...cur, level: e.target.value }))} className={inputCls}>
+                  Level<Req />
+                  <select value={form.level} onChange={(e) => setForm((cur) => ({ ...cur, level: e.target.value }))} required aria-required="true" aria-invalid={!!fieldErrors.level} className={inputCls + errCls(!!fieldErrors.level)}>
+                    <option value="">Select your level</option>
                     {LEVELS.map((l) => (
                       <option key={l}>{l}</option>
                     ))}
                   </select>
+                  <FieldError msg={fieldErrors.level} />
                 </label>
               </div>
               <p className="mt-4 text-sm font-semibold">Fluent languages (besides your native language)</p>
@@ -294,13 +331,14 @@ export default function ExchangeSetupPage() {
                   </select>
                 </label>
                 <label className="block text-sm font-semibold">
-                  Country
-                  <select value={form.country} onChange={(e) => setForm((cur) => ({ ...cur, country: e.target.value }))} className={inputCls}>
+                  Country<Req />
+                  <select value={form.country} onChange={(e) => setForm((cur) => ({ ...cur, country: e.target.value }))} required aria-required="true" aria-invalid={!!fieldErrors.country} className={inputCls + errCls(!!fieldErrors.country)}>
                     <option value="">Select a country</option>
                     {COUNTRIES.map((c) => (
                       <option key={c}>{c}</option>
                     ))}
                   </select>
+                  <FieldError msg={fieldErrors.country} />
                 </label>
                 <label className="block text-sm font-semibold">
                   How I like to practice
@@ -326,31 +364,35 @@ export default function ExchangeSetupPage() {
               <h2 className="font-bold">Age &amp; gender</h2>
               <div className="mt-3 grid gap-3 sm:grid-cols-2">
                 <label className="block text-sm font-semibold">
-                  Date of birth (18+ only — optional for now)
+                  Date of birth (18+ only)<Req />
                   <input
                     type="date"
                     value={form.birthdate}
                     max={maxBirthdate}
                     onChange={(e) => setForm((cur) => ({ ...cur, birthdate: e.target.value }))}
-                    className={inputCls}
+                    required={!savedAgeBand}
+                    aria-required="true"
+                    aria-invalid={!!fieldErrors.birthdate}
+                    className={inputCls + errCls(!!fieldErrors.birthdate)}
                   />
+                  <FieldError msg={fieldErrors.birthdate} />
                 </label>
                 <label className="block text-sm font-semibold">
-                  Gender
-                  <select value={form.gender} onChange={(e) => setForm((cur) => ({ ...cur, gender: e.target.value as Gender }))} className={inputCls}>
+                  Gender<Req />
+                  <select value={form.gender} onChange={(e) => setForm((cur) => ({ ...cur, gender: e.target.value as Gender }))} required aria-required="true" aria-invalid={!!fieldErrors.gender} className={inputCls + errCls(!!fieldErrors.gender)}>
+                    <option value="">Select your gender</option>
                     {GENDERS.map((g) => (
                       <option key={g}>{g}</option>
                     ))}
                   </select>
+                  <FieldError msg={fieldErrors.gender} />
                 </label>
               </div>
               <p className="mt-2 text-xs text-slate-500">
                 {`Your exact birthdate is never shown to anyone — only your age band${birthdateBand ? ` (${birthdateBand})` : savedAgeBand ? ` (${savedAgeBand})` : ''} is shown on your card.`}
                 {birthdateAge !== null && birthdateAge < 18
                   ? ' You must be 18 or older to contact people in People Rooms.'
-                  : !form.birthdate
-                    ? " Optional for now — we'll ask for it before your first People Rooms contact."
-                    : ''}
+                  : ''}
               </p>
             </div>
 

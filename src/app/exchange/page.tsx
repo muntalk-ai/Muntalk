@@ -38,11 +38,15 @@ import {
   GENDERS,
   GOALS,
   LANGUAGES,
+  LEVELS,
+  REQUIRED_SUMMARY_ERROR,
   ageBandForAge,
   calcAge,
+  missingRequiredFields,
   saveBirthdate,
   saveExchangeProfile,
   type AgeBand,
+  type RequiredField,
   type Gender,
   type LearningGoal,
 } from '@/lib/exchangeProfile';
@@ -630,6 +634,16 @@ function speechLangFor(target: string): string {
   return SPEECH_LANG[target] ?? 'en-US';
 }
 
+// Required-field marker / error for the Profile tab (2026-11-26).
+function ReqMark() {
+  return <span className="text-red-600" aria-hidden="true"> *</span>;
+}
+function ReqError({ msg }: { msg?: string }) {
+  if (!msg) return null;
+  return <span role="alert" className="mt-1 block text-xs font-semibold text-red-600">{msg}</span>;
+}
+const reqErrCls = (on: boolean) => (on ? ' border-red-400 ring-2 ring-red-100' : '');
+
 export default function ExchangePage() {
   // 뒤로가기 폴백 (Jay 2026-11-06): muntuz.com 호스트에서는 랜딩이
   // `/`에 있으므로 `/`로, 그 외 호스트(Preview·muntalk.com)에서는
@@ -889,7 +903,8 @@ export default function ExchangePage() {
     } catch { return 'English'; }
   });
   const [fluentLangs, setFluentLangs] = useState<string[]>([]);
-  const [level, setLevel] = useState('Intermediate');
+  // 2026-11-26: level and gender are required — start empty so the user picks.
+  const [level, setLevel] = useState('');
   const [interestSel, setInterestSel] = useState<string[]>(['Travel', 'Cooking']);
   // Set when the user taps an interest chip. The Firestore load below must
   // never overwrite a selection the user already made (load resolving after
@@ -906,7 +921,7 @@ export default function ExchangePage() {
   // Phase 1 human-profile fields.
   const [learningGoal, setLearningGoal] = useState<LearningGoal>('Conversation');
   const [country, setCountry] = useState('');
-  const [gender, setGender] = useState<Gender>('Prefer not to say');
+  const [gender, setGender] = useState<Gender>('');
   // Birthdate is the user's own input for the 18+ gate. Only the derived
   // age band is ever stored in the public profile doc or shown to anyone;
   // the exact date goes to the private subcollection (see saveProfile).
@@ -921,6 +936,17 @@ export default function ExchangePage() {
   const [timezone, setTimezone] = useState('');
   const [utcOffsetMin, setUtcOffsetMin] = useState(0);
   const [saveError, setSaveError] = useState('');
+  // 2026-11-26: required-field errors for the Profile tab form.
+  const [profileTriedSave, setProfileTriedSave] = useState(false);
+  const liveProfileErrors: Partial<Record<RequiredField, string>> = profileTriedSave
+    ? profileFieldErrorsLive()
+    : {};
+  function profileFieldErrorsLive() {
+    return missingRequiredFields(
+      { nickname, birthdate, gender, country, nativeLang, targetLang, level },
+      { existingAgeBand: ageBand },
+    );
+  }
 
   // Timezone is detected from the device, not typed in. Recompute on
   // every save too, in case the user travelled since the page loaded.
@@ -1057,7 +1083,7 @@ export default function ExchangePage() {
     // Safety: a partner who only wants to be found by the same gender is
     // hidden from everyone else — including signed-out viewers, whose
     // gender is "Prefer not to say".
-    if (p.sameGenderOnly && (gender === 'Prefer not to say' || p.gender !== gender)) return false;
+    if (p.sameGenderOnly && (!gender || gender === 'Prefer not to say' || p.gender !== gender)) return false;
     return true;
   });
 
@@ -1455,6 +1481,13 @@ export default function ExchangePage() {
       return;
     }
     setSaveError('');
+    setProfileTriedSave(true);
+    const reqForm = { nickname, birthdate, gender, country, nativeLang, targetLang, level };
+    const missing = missingRequiredFields(reqForm, { existingAgeBand: ageBand });
+    if (Object.keys(missing).length > 0) {
+      setSaveError(REQUIRED_SUMMARY_ERROR);
+      return;
+    }
     const result = await saveExchangeProfile(user.uid, {
       nickname,
       nativeLang,
@@ -1473,7 +1506,7 @@ export default function ExchangePage() {
       availSlots,
       availPerWeek,
       sameGenderOnly,
-    });
+    }, { existingAgeBand: ageBand });
     if (result.ok === false) {
       if (result.error === 'validation') {
         setSaveError(result.message || 'Could not save your profile.');
@@ -3963,7 +3996,7 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
           {tab === 'profile' && (
             <section>
               <h2 className="text-xl font-extrabold">My Exchange profile</h2>
-              <p className="mt-1 text-sm text-slate-500">Partners see your nickname, languages, level, interests, goal, age band and country. Your exact date of birth is never shown to anyone.</p>
+              <p className="mt-1 text-sm text-slate-500">Fields marked <span className="text-red-600">*</span> are required. Partners see your nickname, languages, level, interests, goal, age band and country. Your exact date of birth is never shown to anyone.</p>
               {authLoading ? (
                 <p className="mt-2 text-sm text-slate-500">Checking sign-in…</p>
               ) : user ? (
@@ -3983,39 +4016,49 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
               <div className="mt-4 grid gap-4">
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
                   <label className="block text-sm font-semibold">
-                    Nickname (shown to partners)
+                    Nickname (shown to partners)<ReqMark />
                     <input
                       value={nickname}
                       onChange={(e) => setNickname(e.target.value)}
                       placeholder="Pick a nickname — not your real name"
                       maxLength={40}
-                      className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                      required
+                      aria-required="true"
+                      aria-invalid={!!liveProfileErrors.nickname}
+                      className={`mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100${reqErrCls(!!liveProfileErrors.nickname)}`}
                     />
+                    <ReqError msg={liveProfileErrors.nickname} />
                   </label>
                   <div className="mt-3 grid gap-3 sm:grid-cols-3">
                     <label className="block text-sm font-semibold">
-                      Native language
-                      <select value={nativeLang} onChange={(e) => setNativeLang(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                      Native language<ReqMark />
+                      <select value={nativeLang} onChange={(e) => setNativeLang(e.target.value)} required aria-required="true" aria-invalid={!!liveProfileErrors.nativeLang} className={`mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100${reqErrCls(!!liveProfileErrors.nativeLang)}`}>
+                        <option value="">Select a language</option>
                         {LANGUAGES.map((l) => (
                           <option key={l}>{l}</option>
                         ))}
                       </select>
+                      <ReqError msg={liveProfileErrors.nativeLang} />
                     </label>
                     <label className="block text-sm font-semibold">
-                      Learning
-                      <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                      Learning<ReqMark />
+                      <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)} required aria-required="true" aria-invalid={!!liveProfileErrors.targetLang} className={`mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100${reqErrCls(!!liveProfileErrors.targetLang)}`}>
+                        <option value="">Select a language</option>
                         {LANGUAGES.map((l) => (
                           <option key={l}>{l}</option>
                         ))}
                       </select>
+                      <ReqError msg={liveProfileErrors.targetLang} />
                     </label>
                     <label className="block text-sm font-semibold">
-                      Level
-                      <select value={level} onChange={(e) => setLevel(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
-                        {['Beginner', 'Intermediate', 'Advanced'].map((l) => (
+                      Level<ReqMark />
+                      <select value={level} onChange={(e) => setLevel(e.target.value)} required aria-required="true" aria-invalid={!!liveProfileErrors.level} className={`mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100${reqErrCls(!!liveProfileErrors.level)}`}>
+                        <option value="">Select your level</option>
+                        {LEVELS.map((l) => (
                           <option key={l}>{l}</option>
                         ))}
                       </select>
+                      <ReqError msg={liveProfileErrors.level} />
                     </label>
                   </div>
                   <p className="mt-4 text-sm font-semibold">Fluent languages (besides your native language)</p>
@@ -4057,13 +4100,14 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                       </select>
                     </label>
                     <label className="block text-sm font-semibold">
-                      Country
-                      <select value={country} onChange={(e) => setCountry(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                      Country<ReqMark />
+                      <select value={country} onChange={(e) => setCountry(e.target.value)} required aria-required="true" aria-invalid={!!liveProfileErrors.country} className={`mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100${reqErrCls(!!liveProfileErrors.country)}`}>
                         <option value="">Select a country</option>
                         {COUNTRIES.map((c) => (
                           <option key={c}>{c}</option>
                         ))}
                       </select>
+                      <ReqError msg={liveProfileErrors.country} />
                     </label>
                     <label className="block text-sm font-semibold">
                       How I like to practice
@@ -4088,31 +4132,35 @@ const doSayHello = (p: { id: string; name: string; flag: string }) => {
                   <h3 className="font-bold">Age &amp; gender</h3>
                   <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     <label className="block text-sm font-semibold">
-                      Date of birth (18+ only — optional for now)
+                      Date of birth (18+ only)<ReqMark />
                       <input
                         type="date"
                         value={birthdate}
                         max={maxBirthdate}
                         onChange={(e) => setBirthdate(e.target.value)}
-                        className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100"
+                        required={!ageBand}
+                        aria-required="true"
+                        aria-invalid={!!liveProfileErrors.birthdate}
+                        className={`mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100${reqErrCls(!!liveProfileErrors.birthdate)}`}
                       />
+                      <ReqError msg={liveProfileErrors.birthdate} />
                     </label>
                     <label className="block text-sm font-semibold">
-                      Gender
-                      <select value={gender} onChange={(e) => setGender(e.target.value as Gender)} className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100">
+                      Gender<ReqMark />
+                      <select value={gender} onChange={(e) => setGender(e.target.value as Gender)} required aria-required="true" aria-invalid={!!liveProfileErrors.gender} className={`mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-normal outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-100${reqErrCls(!!liveProfileErrors.gender)}`}>
+                        <option value="">Select your gender</option>
                         {GENDERS.map((g) => (
                           <option key={g}>{g}</option>
                         ))}
                       </select>
+                      <ReqError msg={liveProfileErrors.gender} />
                     </label>
                   </div>
                   <p className="mt-2 text-xs text-slate-500">
                     {`Your exact birthdate is never shown to anyone — only your age band${birthdateBand ? ` (${birthdateBand})` : ageBand ? ` (${ageBand})` : ''} is shown on your card.`}
                     {birthdateAge !== null && birthdateAge < 18
                       ? ' You must be 18 or older to contact people in People Rooms.'
-                      : !birthdate
-                        ? " Optional for now — we'll ask for it before your first People Rooms contact."
-                        : ''}
+                      : ''}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:p-5">
