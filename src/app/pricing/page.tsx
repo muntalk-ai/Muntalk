@@ -51,7 +51,7 @@ function PricingContent() {
   };
 
   const faqs = [
-    { q: 'How much is free?', a: 'A1 level (12 lessons) + 3 AI tutor chats per day are free forever. New Exchange AI chats: 3/day free · 50/day on Pro. Hearts refill 1 every 4 hours.' },
+    { q: 'How much is free?', a: 'A1 + A2 levels (24 lessons) + 3 AI tutor chats per day are free forever. New Exchange AI chats: 3/day free · 50/day on Pro. Hearts refill 1 every 4 hours.' },
     { q: 'Can I cancel anytime?', a: 'Yes — cancel from Profile → Subscription at any time. You keep Premium access until your billing period ends.' },
     { q: 'What payment methods are accepted?', a: 'All major credit and debit cards via Stripe. Safe, encrypted, PCI-compliant.' },
     { q: 'Can I switch plans?', a: 'Yes! Upgrade or downgrade anytime. The price difference is prorated automatically.' },

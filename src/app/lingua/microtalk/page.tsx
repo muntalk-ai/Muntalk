@@ -20,7 +20,9 @@ import {
   splitCorrection,
   type MicroTalkReport,
 } from '@/lib/microtalk';
-import { resolveLearnLang, resolveNativeLang, resolvePurpose } from '@/lib/userProfile';
+import { resolveLearnLang, resolveNativeLang, resolvePurpose, localDateKey } from '@/lib/userProfile';
+import { lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
+import SaveProgressCard from '@/components/SaveProgressCard';
 
 interface ChatMsg { role: 'user' | 'ai'; text: string; correction?: string | null }
 
@@ -281,9 +283,40 @@ export default function MicroTalkPage() {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, phase]);
 
+  // 게스트 Micro-Talk 완료 보상 가드 (Talk again 뒤 재지급 방지)
+  const microtalkRewardedRef = useRef(false);
+
+  // 게스트 첫 방문 경로 기록 (PR A 퍼널용) — entry source 'microtalk', 한 번만.
+  useEffect(() => {
+    if (authLoading || user) return;
+    try {
+      if (!localStorage.getItem('mt_entry_source')) localStorage.setItem('mt_entry_source', 'microtalk');
+    } catch { /* ignore */ }
+  }, [authLoading, user]);
+
+  // 게스트 Micro-Talk 완료 보상 (2026-11-26): +10 XP + 스트릭 1일, 로컬 저장 —
+  // 가입 시 기존 이관(migrateFromLocalStorage)이 계정으로 옮긴다.
+  // 로그인 유저는 기존 동작 유지 (서버 XP·스트릭 그대로).
+  useEffect(() => {
+    if (phase !== 'report' || user || microtalkRewardedRef.current) return;
+    microtalkRewardedRef.current = true;
+    try {
+      lpSet('mt_xp', String((lpGetInt('mt_xp') || 0) + 10));
+      const today = localDateKey(new Date());
+      const dates = lpGetJson<string[]>('mt_activity_dates', []);
+      if (!dates.includes(today)) {
+        dates.push(today);
+        dates.sort();
+        lpSet('mt_activity_dates', JSON.stringify(dates));
+      }
+      if (!localStorage.getItem('mt_guest_microtalk_completed_at')) localStorage.setItem('mt_guest_microtalk_completed_at', new Date().toISOString());
+    } catch { /* ignore */ }
+  }, [phase, user]);
+
   const reset = () => {
     if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
     messagesRef.current = [];
+    microtalkRewardedRef.current = false;
     setMessages([]); setReport(null); setError(''); setInput('');
     setTranslations({}); setTranslatingIdx(null);
     setSecondsLeft(MICROTALK_SECONDS);
@@ -495,13 +528,19 @@ export default function MicroTalkPage() {
             ) : (
               <div style={S.loadingText}>Writing your recap…</div>
             )}
+            {!user && report && (
+              <div style={{ fontSize: 13, fontWeight: 800, color: '#FBBF24', marginBottom: 12 }}>
+                ⭐ +10 XP earned
+              </div>
+            )}
             <div style={S.reportBtns}>
+              {!user && report && <SaveProgressCard />}
+              {report && <button style={S.ghostBtn} onClick={shareResult}>📤 {shared ? 'Copied!' : 'Share'}</button>}
               {!user && report && (
-                <button style={S.startBtn} onClick={() => router.push('/signup?next=/lingua/microtalk')}>
-                  🚀 Sign up free to save your phrases
+                <button style={S.startBtn} onClick={() => router.push('/lingua/starter?onboarding=1')}>
+                  📚 Try your first lesson →
                 </button>
               )}
-              {report && <button style={S.ghostBtn} onClick={shareResult}>📤 {shared ? 'Copied!' : 'Share'}</button>}
               <button style={user ? S.startBtn : S.ghostBtn} onClick={reset}>🔁 Talk again</button>
               <button style={S.ghostBtn} onClick={() => router.push('/lingua/roleplay')}>🎭 More in Roleplay</button>
               <button style={S.ghostBtn} onClick={() => router.push('/lingua')}>← Home</button>

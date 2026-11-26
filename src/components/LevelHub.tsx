@@ -17,6 +17,7 @@ import { CURRICULUM, getCurrentLevel } from '@/data/curriculum';
 import { LEARN_LANGUAGES, UI_LANGUAGES } from '@/data/languages';
 import { isNonLatinLang } from '@/data/alphabets/types';
 import { getSubscription, getHearts, getLocalHearts, isLevelLocked, isAdminEmail, effectivePlanId, PlanId, Hearts } from '@/lib/subscription';
+import { FIRST_LESSON_PATH } from '@/lib/returnUrl';
 import PaywallModal from '@/components/PaywallModal';
 import WowFirstPhrase from '@/components/WowFirstPhrase';
 import TrialBanner from '@/components/TrialBanner';
@@ -133,6 +134,15 @@ export default function LevelHub() {
     if (toast) { const t = setTimeout(() => setToast(null), 2500); return () => clearTimeout(t); }
   }, [toast]);
 
+  // 게스트 첫 방문 경로 기록 (PR A 퍼널용): 릴스 유입(?r=)이면 first-touch 'reel'.
+  // 게스트만, 한 번만 (이미 있으면 덮지 않음).
+  useEffect(() => {
+    if (user || !reelTag) return;
+    try {
+      if (!localStorage.getItem('mt_entry_source')) localStorage.setItem('mt_entry_source', 'reel');
+    } catch { /* ignore */ }
+  }, [user, reelTag]);
+
   // -- PR #110: 릴스 유입 체험 직행 (?trial=1) — 게스트 전용 WowFirstPhrase로 스크롤 + 펄스 강조 --
   const trialRef = useRef<HTMLDivElement>(null);
   const [trialHighlight, setTrialHighlight] = useState(false);
@@ -169,10 +179,15 @@ export default function LevelHub() {
   const [showPushPrime, setShowPushPrime] = useState(false);
 
   // 푸시 옵트인 카드: 첫 레슨 완료 + 토큰 없음 + 미거부 시 1회 노출
+  // 2026-11-26: 가입 전 첫 레슨 뒤 [Remind me]를 누른 게스트(mt_reminder_opt_in='1',
+  // 가입 시 이 계정으로 이관됨)는 레슨 수와 무관하게 바로 카드를 보여준다.
+  // 브라우저 권한 요청은 여전히 카드 버튼을 탭해야만 뜬다 (사용자 제스처 필요).
   useEffect(() => {
-    if (authLoading || !user || completedLessons.size < 1) return;
+    if (authLoading || !user) return;
+    const optedIn = lpGet('mt_reminder_opt_in') === '1';
+    if (!optedIn && completedLessons.size < 1) return;
     try {
-      if (localStorage.getItem('mt_push_prime_dismissed')) return;
+      if (!optedIn && localStorage.getItem('mt_push_prime_dismissed')) return;
     } catch { /* ignore */ }
     (async () => {
       try {
@@ -466,6 +481,8 @@ export default function LevelHub() {
   };
   const isLevelUnlocked = (levelId: string): boolean => {
     if (isAdmin) return true;
+    // 2026-11-26: Free 기본 A1·A2 — XP 무관 해금 (기존 회원 포함)
+    if (levelId === 'a1' || levelId === 'a2') return true;
     if (xp >= (XP_BOUNDS[levelId]?.[0] ?? 0)) return true;
     // 레벨테스트 배정 결과: 배정 레벨까지는 XP 무관 접근 허용
     if (placementLevel) {
@@ -1136,15 +1153,15 @@ export default function LevelHub() {
                 {/* PR #110: ?r= 태그 유입 시 체험 CTA 1개만 남김 (가입/테스트 버튼 숨김, 선체험 후가입) → 체험 섹션으로 스크롤 */}
                 <button style={{ ...styles.heroBtn1, fontSize: 16, padding: '15px 36px' }}
                   onClick={() => {
-                    logReelCta(reelHero ? 'trial-primary' : 'microtalk');
-                    if (reelHero) scrollToTrial(); else router.push('/lingua/microtalk');
+                    if (reelHero) { logReelCta('trial-primary'); scrollToTrial(); }
+                    else { logReelCta('starter'); router.push(FIRST_LESSON_PATH); }
                   }}>
-                  {reelHero ? reelHero.cta : '⚡ Try a 3-min free chat'}
+                  {reelHero ? reelHero.cta : '🚀 Start Learning Free'}
                 </button>
                 {!reelHero && (
                   <>
-                    <button style={styles.heroBtn2} onClick={() => { logReelCta('signup'); router.push('/signup'); }}>
-                      🚀 Start Learning Free
+                    <button style={{ ...styles.heroBtn2, fontSize: 14, padding: '11px 22px' }} onClick={() => { logReelCta('microtalk'); router.push('/lingua/microtalk'); }}>
+                      💬 Talk to AI now
                     </button>
                     <button style={styles.heroBtn2} onClick={() => { logReelCta('placement'); setPendingLevelId(null); openLangModal(); }}>
                       🎯 Free Placement Test

@@ -362,7 +362,7 @@ export default function ProfilePage() {
                     {isPremium ? '⭐ ' : ''}{planName}
                   </div>
                   <div style={{ fontSize: 13, color: isPremium ? 'rgba(255,255,255,0.6)' : '#64748B', marginTop: 4 }}>
-                    {isPremium ? 'All features unlocked' : 'A1 level + 3 AI chats/day'}
+                    {isPremium ? 'All features unlocked' : 'A1 + A2 levels + 3 AI chats/day'}
                   </div>
                 </div>
                 {isPremium && <div style={{ fontSize: 40 }}>🏆</div>}

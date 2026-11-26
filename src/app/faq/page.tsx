@@ -118,7 +118,7 @@ Sign up for a free account to ensure your progress is always saved to the cloud.
           </thead>
           <tbody>
             {[
-              ['Lessons available',    'A1 Lesson 1 only', 'All A1 (12 lessons)', 'All levels A1–C2'],
+              ['Lessons available',    'A1 Lesson 1 only', 'All A1 + A2 (24 lessons)', 'All levels A1–C2'],
               ['AI tutor chat',        '3/day',            '3/day',               'Unlimited'],
               ['Progress saved',       '❌',               '✅',                  '✅'],
               ['Placement test',       '❌',               '✅',                  '✅'],

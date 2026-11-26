@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { requestPushPermission } from '@/lib/notifications';
 import { updateUserProfile } from '@/lib/userProfile';
+import { lpSet } from '@/lib/localProgress';
 
 // 첫 레슨 완료 후 보여주는 푸시 옵트인 카드 (soft-prime).
 // 브라우저 기본 권한 팝업을 바로 띄우지 않고, 먼저 가치를 설명한 뒤 요청.
@@ -12,6 +13,8 @@ export default function PushPrimeCard({ uid, onDone }: { uid: string; onDone: ()
 
   const dismiss = () => {
     try { localStorage.setItem('mt_push_prime_dismissed', '1'); } catch { /* ignore */ }
+    // 가입 전 [Remind me] 의사는 한 번 답했으므로 소진 처리 (카드 재노출 방지)
+    try { lpSet('mt_reminder_opt_in', '0'); } catch { /* ignore */ }
     onDone();
   };
 
@@ -21,6 +24,7 @@ export default function PushPrimeCard({ uid, onDone }: { uid: string; onDone: ()
       const token = await requestPushPermission(uid);
       if (token) {
         await updateUserProfile(uid, { pushNotifications: true } as any).catch(() => {});
+        try { lpSet('mt_reminder_opt_in', 'on'); } catch { /* ignore */ }
         setResult('ok');
         setTimeout(onDone, 1800);
       } else {

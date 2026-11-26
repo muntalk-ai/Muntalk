@@ -143,7 +143,7 @@ Rules:
 function PlacementInner() {
   const router       = useRouter();
   const searchParams = useSearchParams();
-  const { user, profile, refreshProfile } = useAuth();
+  const { user, profile, loading: authLoading, refreshProfile } = useAuth();
 
   const learnLang  = profile?.learnLang  || (lpGet('mt_learn_lang'))  || searchParams.get('lang')  || 'en-US';
   // 모국어 폴백: 프로필 → localStorage → 브라우저 언어 → 영어 (ko-KR 하드코딩 제거)
@@ -187,6 +187,14 @@ function PlacementInner() {
   const styleCardRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
+
+  // 게스트 첫 방문 경로 기록 (PR A 퍼널용) — entry source 'placement', 한 번만.
+  useEffect(() => {
+    if (authLoading || user) return;
+    try {
+      if (!localStorage.getItem('mt_entry_source')) localStorage.setItem('mt_entry_source', 'placement');
+    } catch { /* ignore */ }
+  }, [authLoading, user]);
 
   // -- TRACK: answer handler ------------------------------------------------
   const handleTrackAnswer = (optIdx: number) => {
@@ -364,12 +372,14 @@ function PlacementInner() {
           placementLevel: cefrLevel,
           placementTrack: trackResult.track,
           placementDone:  true,
+          placementSource: 'test',
         } as any);
         await refreshProfile();
       }
       lpSet('mt_xp', String(xp));
       lpSet('mt_placement_done',  'true');
       lpSet('mt_placement_level', cefrLevel);
+      lpSet('mt_placement_source', 'test');
       lpSet('mt_track',           trackResult.track);
       localStorage.setItem('mt_placement_last',  String(Date.now()));
       setSaving(false);
