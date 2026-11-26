@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '"서비스예요"는 "service"가 아닙니다 — It\'s on the house',
+  title: "공짜 영어로 — \"service\"가 아니라 \"It's on the house\"입니다",
   description:
-    '"service"에는 공짜라는 뜻이 없습니다. 가게에서 공짜로 준다는 뜻은 It\'s on the house입니다. service의 진짜 뜻과 공짜 표현을 정리했습니다.',
+    "가게에서 \"서비스예요\"라며 공짜로 줄 때 영어로는 service가 아니라 It's on the house라고 합니다. on the house 뜻과 free와의 차이를 정리했습니다.",
   alternates: { canonical: '/learn/on-the-house-not-service' },
 };
 

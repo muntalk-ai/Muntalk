@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '"약속 있어요"는 "I have a promise"가 아닙니다 — I have plans',
+  title: "약속 있어요 영어로 — \"I have a promise\"가 아니라 \"I have plans\"입니다",
   description:
-    '"I have a promise"라고 하면 원어민에겐 "맹세한 게 있다"로 들립니다. 약속이 있다는 영어는 I have plans입니다. promise와 plans의 차이를 정리했습니다.',
+    "\"약속이 있어요\"를 \"I have a promise\"라고 하면 \"맹세한 게 있어요\"로 들립니다. 약속이 있다는 영어는 I have plans. promise와 plans의 차이와 예문을 정리했습니다.",
   alternates: { canonical: '/learn/i-have-plans-not-promise' },
 };
 

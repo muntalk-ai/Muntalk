@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '"I\'m boring"이 아니라 "I\'m bored"입니다 — 지루하다고 말할 때',
+  title: "I'm bored와 I'm boring 차이는? — \"I'm boring\"은 \"나는 지루한 사람\"이라는 틀린 영어",
   description:
-    '"I\'m boring"이라고 하면 "나는 지루한 사람"이 됩니다. -ed와 -ing의 차이, I\'m bored / I\'m boring 구분법과 예문을 정리했습니다.',
+    "\"지루해\"를 \"I'm boring\"이라고 하면 \"나는 지루한 사람이에요\"가 됩니다. 지루할 땐 I'm bored. -ed(느끼는 쪽)와 -ing(만드는 쪽) 구분법과 예문을 정리했습니다.",
   alternates: { canonical: '/learn/im-bored-not-boring' },
 };
 

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '핸드폰 영어는 "hand phone"이 아닙니다 — cell phone',
+  title: "핸드폰 영어로? — \"hand phone\"이 아니라 \"cell phone\"입니다",
   description:
-    '"hand phone"은 영어에 없는 말입니다. 원어민은 못 알아듣습니다. 미국식은 cell phone, 영국식은 mobile phone입니다.',
+    "핸드폰·폰을 영어로 \"hand phone\"이라고 하면 원어민은 못 알아듣습니다. 미국식은 cell phone, 영국식은 mobile phone, 일상에선 그냥 phone. 예문으로 정리했습니다.",
   alternates: { canonical: '/learn/cell-phone-not-hand-phone' },
 };
 

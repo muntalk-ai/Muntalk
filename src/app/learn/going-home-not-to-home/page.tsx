@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '"I\'m going to home"은 틀렸습니다 — I\'m going home',
+  title: "going home 뜻 — \"I'm going to home\"이 아니라 \"I'm going home\"인 이유",
   description:
-    'home 앞에는 to를 붙이지 않습니다. I\'m going home이 맞습니다. home이 부사처럼 쓰이는 이유와 home / house 구분을 정리했습니다.',
+    "\"집에 가요\"는 I'm going home입니다. home 앞에는 to를 붙이지 않습니다. go home과 go to home 차이, home이 부사처럼 쓰이는 이유와 home / house 구분을 정리했습니다.",
   alternates: { canonical: '/learn/going-home-not-to-home' },
 };
 
