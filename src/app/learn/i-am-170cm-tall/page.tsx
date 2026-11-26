@@ -4,7 +4,7 @@ import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../ar
 export const metadata: Metadata = {
   title: "키가 170cm 영어로 — \"I am 170cm\"가 아니라 \"I am 170cm tall\"입니다",
   description:
-    "\"키가 170cm예요\"는 \"I am 170cm\"이 아니라 \"I am 170cm tall\"입니다. 숫자 뒤에 tall을 빼면 어색하고, 키를 물을 때는 \"How tall are you?\"라고 합니다. 미국식 피트·인치 표현도 함께 정리했습니다.",
+    "\"키가 170cm예요\"는 \"I am 170cm\"가 아니라 \"I am 170cm tall\"입니다. 숫자 뒤에 tall을 빼면 어색하고, 키를 물을 때는 \"How tall are you?\"라고 합니다. 미국식 피트·인치 표현도 함께 정리했습니다.",
   alternates: { canonical: '/learn/i-am-170cm-tall' },
 };
 
@@ -23,7 +23,7 @@ export default function Page() {
 
       <Card>
         <SectionTitle>{"왜 틀릴까"}</SectionTitle>
-        <Body>{"한국어 “키가 170cm입니다”를 직역하면 숫자만 남지만, 영어에서 키를 말할 때는 숫자 뒤에 tall을 붙이는 것이 기본 패턴입니다. “I am 170cm”은 뜻은 통하지만 원어민이 잘 쓰지 않는 어색한 표현이고, “I am 170cm tall”이 자연스럽습니다. tall은 키가 크다는 형용사로, 숫자만큼 크다는 뜻을 완성합니다."}</Body>
+        <Body>{"한국어 “키가 170cm입니다”를 직역하면 숫자만 남지만, 영어에서 키를 말할 때는 숫자 뒤에 tall을 붙이는 것이 기본 패턴입니다. “I am 170cm”는 뜻은 통하지만 원어민이 잘 쓰지 않는 어색한 표현이고, “I am 170cm tall”이 자연스럽습니다. tall은 키가 크다는 형용사로, 숫자만큼 크다는 뜻을 완성합니다."}</Body>
         <BulletList
           items={[
             <>{"I am "}<strong>{"170cm tall"}</strong>{". (키가 170cm예요.)"}</>,

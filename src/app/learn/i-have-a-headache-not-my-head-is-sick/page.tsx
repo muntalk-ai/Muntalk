@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: "머리 아파요 영어로 — \"My head is sick\"가 아니라 \"I have a headache\"",
+  title: "머리 아파요 영어로 — \"My head is sick\"이 아니라 \"I have a headache\"",
   description:
     "머리 아파요는 My head is sick이 아니라 I have a headache입니다. 몸이 아플 때 쓰는 have a + 증상 표현을 정리했습니다.",
   alternates: { canonical: '/learn/i-have-a-headache-not-my-head-is-sick' },
@@ -13,7 +13,7 @@ export default function Page() {
     <ArticleShell
       lang="ko"
       kicker="✚ 콩글리시 응급실"
-      title={"“My head is sick”가 아니라 “I have a headache”입니다"}
+      title={"“My head is sick”이 아니라 “I have a headache”입니다"}
       practice={"I have a headache."}
     >
       <Card>

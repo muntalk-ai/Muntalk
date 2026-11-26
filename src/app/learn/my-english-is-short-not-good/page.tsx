@@ -23,7 +23,7 @@ export default function Page() {
 
       <Card>
         <SectionTitle>{"왜 틀릴까"}</SectionTitle>
-        <Body>{"한국어 “실력이 짧다”를 그대로 옮기면 “My English is short”이 됩니다. 그런데 영어에서 short는 길이·키가 짧다는 뜻입니다. “My English is short”은 원어민에게 “제 영어가 길이가 짧아요”라는 이상한 말로 들립니다. 실력의 높낮이는 short/long이 아니라 good/bad, poor, not very good으로 말합니다."}</Body>
+        <Body>{"한국어 “실력이 짧다”를 그대로 옮기면 “My English is short”가 됩니다. 그런데 영어에서 short는 길이·키가 짧다는 뜻입니다. “My English is short”는 원어민에게 “제 영어가 길이가 짧아요”라는 이상한 말로 들립니다. 실력의 높낮이는 short/long이 아니라 good/bad, poor, not very good으로 말합니다."}</Body>
         <BulletList
           items={[
             <>{"short: 길이가 짧다, 키가 작다 (short hair, a short person)"}</>,

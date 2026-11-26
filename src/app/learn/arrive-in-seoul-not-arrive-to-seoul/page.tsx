@@ -13,7 +13,7 @@ export default function Page() {
     <ArticleShell
       lang="ko"
       kicker="✚ 콩글리시 응급실"
-      title={"“I will arrive to Seoul”가 아니라 “I will arrive in Seoul”입니다"}
+      title={"“I will arrive to Seoul”이 아니라 “I will arrive in Seoul”입니다"}
       practice={"I will arrive in Seoul tomorrow."}
     >
       <Card>
