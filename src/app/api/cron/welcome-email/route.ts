@@ -5,6 +5,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { adminDb } from '@/lib/firebaseAdmin';
 import { fetchWithTimeout } from '@/lib/apiGuard';
+import { FIRST_LESSON_PATH } from '@/lib/returnUrl';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -26,7 +27,7 @@ function welcomeHtml(name: string): string {
   // Duolingo-style: single column, big rounded CTA, playful emoji anchors,
   // table layout + inline styles for Gmail/Apple Mail/Outlook.
   return `<!DOCTYPE html><html><body style="margin:0;padding:0;background-color:#F1F5F9;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Say your first English sentence out loud — it takes 30 seconds.</div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Your first lesson is waiting — learn a few words and say them out loud.</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F1F5F9;padding:32px 16px;">
 <tr><td align="center">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#ffffff;border-radius:20px;overflow:hidden;">
@@ -36,7 +37,7 @@ function welcomeHtml(name: string): string {
   </td></tr>
   <tr><td style="padding:36px 32px 8px;text-align:center;">
     <div style="font-size:52px;line-height:1;">🎤</div>
-    <h1 style="font-family:Arial,sans-serif;font-size:26px;font-weight:bold;color:#0F172A;margin:16px 0 8px;">Hi ${firstName}, your first<br/>30 seconds are waiting</h1>
+    <h1 style="font-family:Arial,sans-serif;font-size:26px;font-weight:bold;color:#0F172A;margin:16px 0 8px;">Hi ${firstName}, your first<br/>lesson is waiting</h1>
     <p style="font-family:Arial,sans-serif;font-size:15px;line-height:1.7;color:#475569;margin:0;">
       You signed up yesterday — nice first step. Now comes the fun part:
       <strong style="color:#0F172A;">saying your first English sentence out loud.</strong>
@@ -44,9 +45,9 @@ function welcomeHtml(name: string): string {
     </p>
   </td></tr>
   <tr><td style="padding:20px 32px;text-align:center;">
-    <a href="https://www.muntalk.com/lingua/placement"
-       style="display:inline-block;background-color:#4F46E5;color:#ffffff;font-family:Arial,sans-serif;font-size:17px;font-weight:bold;padding:16px 40px;border-radius:999px;text-decoration:none;">Start my first 30 seconds →</a>
-    <p style="font-family:Arial,sans-serif;font-size:12px;color:#94A3B8;margin:12px 0 0;">Takes 30 seconds · Free forever plan</p>
+    <a href="https://www.muntalk.com${FIRST_LESSON_PATH}"
+       style="display:inline-block;background-color:#4F46E5;color:#ffffff;font-family:Arial,sans-serif;font-size:17px;font-weight:bold;padding:16px 40px;border-radius:999px;text-decoration:none;">Start my first lesson →</a>
+    <p style="font-family:Arial,sans-serif;font-size:12px;color:#94A3B8;margin:12px 0 0;">Takes a few minutes · Free forever plan</p>
   </td></tr>
   <tr><td style="padding:8px 32px 12px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
@@ -71,7 +72,7 @@ function welcomeHtml(name: string): string {
   </td></tr>
   <tr><td style="padding:4px 32px 32px;text-align:center;">
     <p style="font-family:Arial,sans-serif;font-size:14px;line-height:1.7;color:#475569;margin:0;background-color:#EEF2FF;border-radius:14px;padding:16px 20px;">
-      👀 Most people quit <em>before</em> their first 30 seconds.<br/>Don't be most people 🙂
+      👀 Most people quit <em>before</em> their first lesson.<br/>Don't be most people 🙂
     </p>
   </td></tr>
   <tr><td style="padding:20px 32px 28px;text-align:center;border-top:1px solid #F1F5F9;">
@@ -129,7 +130,7 @@ export async function GET(req: NextRequest) {
           body: JSON.stringify({
             from: process.env.RESEND_FROM_EMAIL || 'MunTalk <noreply@muntalk.com>',
             to: [u.email],
-            subject: '👋 Your first 30 seconds are waiting',
+            subject: '👋 Your first lesson is waiting',
             html: welcomeHtml(u.displayName),
           }),
         }, 30000);

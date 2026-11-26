@@ -1768,6 +1768,34 @@ LANGUAGE RULES:
         </div>
       )}
 
+      {/* 가입 직후 첫 레슨 완료 → 레벨 테스트 권유 (건너뛰기 가능, 2026-11-26) */}
+      {params.get('onboarding') === '1' && (
+        <div style={{ background: 'white', border: '2px solid #6366F140',
+          borderRadius: 18, padding: '20px', marginBottom: 16, maxWidth: 360 }}>
+          <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A',
+            marginBottom: 6 }}>Your first lesson is done!</div>
+          <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.6,
+            marginBottom: 16 }}>
+            Take a short level test so your next lessons fit you.
+          </div>
+          <div style={{ display: 'flex', gap: 10, justifyContent: 'center',
+            flexWrap: 'wrap' }}>
+            <button onClick={() => router.push('/lingua/placement')}
+              style={{ ...btnBase, padding: '11px 22px', fontSize: 14,
+                background: 'linear-gradient(135deg, #6366F1, #8B5CF6)',
+                color: 'white' }}>
+              Find your level →
+            </button>
+            <button onClick={() => router.push('/lingua')}
+              style={{ ...btnBase, padding: '11px 22px', fontSize: 14,
+                background: 'white', color: '#6366F1',
+                border: '2px solid #6366F1' }}>
+              Skip for now
+            </button>
+          </div>
+        </div>
+      )}
+
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12,
         width: '100%', maxWidth: 320 }}>
         {unitIdx + 1 < UNITS.length && (
