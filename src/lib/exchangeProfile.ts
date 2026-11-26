@@ -31,7 +31,9 @@ import { LEARN_LANGUAGES } from '@/data/languages';
 export const GOALS = ['Conversation', 'Exam', 'Travel', 'Work', 'Friends'] as const;
 export type LearningGoal = (typeof GOALS)[number];
 export const GENDERS = ['Female', 'Male', 'Non-binary', 'Prefer not to say'] as const;
-export type Gender = (typeof GENDERS)[number];
+// '' = not chosen yet (2026-11-26: gender is now required, so the form
+// starts empty instead of pre-selecting 'Prefer not to say').
+export type Gender = (typeof GENDERS)[number] | '';
 export const AGE_BANDS = ['18–24', '25–34', '35–44', '45+'] as const;
 export type AgeBand = (typeof AGE_BANDS)[number];
 export const COMM_MODES = ['Text', 'Voice', 'Both'] as const;
@@ -51,7 +53,10 @@ export const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] as const;
 export const LANGUAGES: readonly string[] = [
   ...new Set(LEARN_LANGUAGES.map((l) => l.label.replace(/ \([^)]*\)$/, ''))),
 ];
-export const LEVELS = ['Beginner', 'Intermediate', 'Advanced'] as const;
+// 'Not sure' added 2026-11-26 (level is now required — Jay). Stored as its
+// own value; nothing ranks levels, it is only shown and used as an exact
+// Discover filter.
+export const LEVELS = ['Beginner', 'Intermediate', 'Advanced', 'Not sure'] as const;
 export const INTERESTS = ['Travel', 'Cooking', 'Football', 'Music', 'Movies', 'Reading', 'Hiking'] as const;
 export const COUNTRIES = [
   'Argentina', 'Australia', 'Austria', 'Bangladesh', 'Belgium', 'Brazil', 'Canada',
@@ -134,15 +139,16 @@ export type ExchangeProfileForm = {
 export function defaultExchangeProfileForm(): ExchangeProfileForm {
   return {
     nickname: '',
-    nativeLang: 'English',
-    targetLang: 'Korean',
+    // 2026-11-26: required fields start empty so the user actually picks them.
+    nativeLang: '',
+    targetLang: '',
     fluentLangs: [],
-    level: 'Intermediate',
+    level: '',
     interests: ['Travel', 'Cooking'],
     bio: '',
     learningGoal: 'Conversation',
     country: '',
-    gender: 'Prefer not to say',
+    gender: '',
     birthdate: '',
     commMode: 'Both',
     correctionPref: 'Sometimes',
@@ -178,6 +184,42 @@ export function validateBirthdate(
   return { ok: true, age, band: ageBandForAge(age) as AgeBand };
 }
 
+// ── Required fields (Jay, 2026-11-26) ─────────────────────────────────
+// Nickname, date of birth, gender, country, native language, learning
+// language and level must all be filled before a profile can be saved.
+// Everything else stays optional. A profile that already has an age band
+// (birthdate given before) counts as having a date of birth, because the
+// exact date lives in an owner-only doc that may not load back.
+export type RequiredField =
+  | 'nickname' | 'birthdate' | 'gender' | 'country' | 'nativeLang' | 'targetLang' | 'level';
+
+export const REQUIRED_FIELD_ERRORS: Record<RequiredField, string> = {
+  nickname: 'Enter a nickname.',
+  birthdate: 'Enter your date of birth.',
+  gender: 'Select your gender.',
+  country: 'Select your country.',
+  nativeLang: 'Select your native language.',
+  targetLang: 'Select the language you are learning.',
+  level: 'Select your level.',
+};
+
+export function missingRequiredFields(
+  form: Pick<ExchangeProfileForm, RequiredField>,
+  opts: { existingAgeBand?: string } = {}
+): Partial<Record<RequiredField, string>> {
+  const out: Partial<Record<RequiredField, string>> = {};
+  if (!form.nickname.trim()) out.nickname = REQUIRED_FIELD_ERRORS.nickname;
+  if (!form.birthdate.trim() && !opts.existingAgeBand) out.birthdate = REQUIRED_FIELD_ERRORS.birthdate;
+  if (!form.gender || !(GENDERS as readonly string[]).includes(form.gender)) out.gender = REQUIRED_FIELD_ERRORS.gender;
+  if (!form.country.trim()) out.country = REQUIRED_FIELD_ERRORS.country;
+  if (!form.nativeLang.trim()) out.nativeLang = REQUIRED_FIELD_ERRORS.nativeLang;
+  if (!form.targetLang.trim()) out.targetLang = REQUIRED_FIELD_ERRORS.targetLang;
+  if (!form.level || !(LEVELS as readonly string[]).includes(form.level)) out.level = REQUIRED_FIELD_ERRORS.level;
+  return out;
+}
+
+export const REQUIRED_SUMMARY_ERROR = 'Please fill in all required fields (marked *).';
+
 export type SaveExchangeProfileResult =
   | { ok: true; band: AgeBand; timezone: string; utcOffsetMin: number; birthdateSaved: true }
   | {
@@ -192,7 +234,12 @@ export type SaveExchangeProfileResult =
   // (re)computed, so any band already on the public doc is left
   // untouched. The birthdate is collected at the first human match.
   | { ok: true; band: ''; timezone: string; utcOffsetMin: number; birthdateSaved: false; birthdateDeferred: true }
-  | { ok: false; error: 'permission-denied' | 'other' | 'validation'; message?: string };
+  | {
+      ok: false;
+      error: 'permission-denied' | 'other' | 'validation';
+      message?: string;
+      fieldErrors?: Partial<Record<RequiredField, string>>;
+    };
 
 // Save the public profile doc (age band only — never the exact birthdate)
 // and, when a birthdate was entered, the owner-only private identity doc.
@@ -202,8 +249,15 @@ export type SaveExchangeProfileResult =
 // human match (saveBirthdate).
 export async function saveExchangeProfile(
   uid: string,
-  form: ExchangeProfileForm
+  form: ExchangeProfileForm,
+  opts: { existingAgeBand?: string } = {}
 ): Promise<SaveExchangeProfileResult> {
+  // Required fields (2026-11-26) — enforced here too, so no caller can
+  // save a profile with one of them missing.
+  const fieldErrors = missingRequiredFields(form, opts);
+  if (Object.keys(fieldErrors).length > 0) {
+    return { ok: false, error: 'validation', message: REQUIRED_SUMMARY_ERROR, fieldErrors };
+  }
   // A birthdate that IS entered is still fully validated — an invalid
   // or under-18 date refuses the save, exactly as before 9A.
   const hasBirthdate = form.birthdate.trim().length > 0;

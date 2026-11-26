@@ -93,6 +93,10 @@ export default function AdminPage() {
   // "No logs yet" while the 65+ rows are still being fetched.
   const [logsLoading, setLogsLoading] = useState(false);
   const [fetching, setFetching] = useState(true);
+  // 2026-11-26: 사용자 목록 로드 실패를 0명으로 숨기지 않고 표시 + Auth 기준 총계
+  const [usersError, setUsersError] = useState('');
+  const [authTotal, setAuthTotal] = useState<number | null>(null);
+  const [authOnly, setAuthOnly] = useState<{ uid: string; email: string; createdAt: string }[]>([]);
   const [search, setSearch] = useState('');
   const [saving, setSaving] = useState<string | null>(null);
   const [toast, setToast] = useState('');
@@ -163,46 +167,78 @@ export default function AdminPage() {
   }, [denied]);
 
   // Fetch users
+  // 2026-11-26: 서버 API(/api/admin/users, Admin SDK) 먼저 — 라이브 Firestore 규칙의
+  // isAdmin()은 muntalkofficial 하나뿐이라 muntuz.official로 열면 브라우저 직접 읽기가
+  // 거부되고, 예전에는 그 에러를 삼켜서 "0 users"로 보였다. API가 실패하면 기존
+  // 브라우저 직접 읽기로 한 번 더 시도하고, 둘 다 실패하면 0 대신 에러를 띄운다.
   useEffect(() => {
     if (!user || !ADMIN_EMAILS.includes(user.email||'')) { setFetching(false); return; }
     (async () => {
       setFetching(true);
-      try {
-        const snap = await getDocs(collection(db, 'users'));
-        // QA S-6: 구독 조회를 사용자마다 순차 await하면 45명 × 왕복 시간만큼
-        // 첫 화면이 늦어진다(느린 연결에서 20초+). 병렬로 한 번에 조회한다.
-        const rows: UserRow[] = (await Promise.all(snap.docs.map(async (d) => {
-          const u = d.data();
-          let planId: PlanId='free', planStatus='active', expiry='';
-          try {
-            const sub = await getDoc(doc(db,'subscriptions',d.id));
-            if (sub.exists()) {
-              planId=sub.data().planId||'free';
-              planStatus=sub.data().status||'active';
-              expiry=sub.data().currentPeriodEnd||'';
-            }
-          } catch {}
-          return {
-            uid:d.id, email:u.email||'', displayName:u.displayName||u.name||'—',
-            planId, planStatus, expiry, xp:u.xp||0, streak:u.streak||0,
-            createdAt:u.createdAt?.toDate?.()?.toISOString?.()?.slice(0,10)||u.createdAt?.slice?.(0,10)||'',
-            learnLang:u.learnLang||'—', nativeLang:u.nativeLang||'—',
-            lastActive:u.lastActive||'', lessonsDone:Array.isArray(u.completedLessons)?u.completedLessons.length:0,
-            activityDates:Array.isArray(u.activityDates)?u.activityDates:[],
-            visitDays:Array.isArray(u.activityDates)?u.activityDates.length:0,
-            realVisitDates:Array.isArray(u.visitDates)?[...u.visitDates].sort():[],
-            lastSeen:u.lastSeen||'',
-            muntuzVisitDays:Array.isArray(u.muntuzVisitDates)?u.muntuzVisitDates.length:0,
-            funnel:(u.funnel&&typeof u.funnel==='object')?u.funnel:{},
-            entrySource:u.entrySource||'',
-          };
-        })));
+      setUsersError('');
+      const toRow = (u: Record<string, any>, uid: string, sub?: Record<string, any>): UserRow => ({
+        uid, email:u.email||'', displayName:u.displayName||u.name||'—',
+        planId:(sub?.planId||'free') as PlanId, planStatus:sub?.status||'active', expiry:sub?.currentPeriodEnd||'',
+        xp:u.xp||0, streak:u.streak||0,
+        createdAt:u.createdAt?.toDate?.()?.toISOString?.()?.slice(0,10)||u.createdAt?.slice?.(0,10)||'',
+        learnLang:u.learnLang||'—', nativeLang:u.nativeLang||'—',
+        lastActive:u.lastActive||'', lessonsDone:Array.isArray(u.completedLessons)?u.completedLessons.length:0,
+        activityDates:Array.isArray(u.activityDates)?u.activityDates:[],
+        visitDays:Array.isArray(u.activityDates)?u.activityDates.length:0,
+        realVisitDates:Array.isArray(u.visitDates)?[...u.visitDates].sort():[],
+        lastSeen:u.lastSeen||'',
+        muntuzVisitDays:Array.isArray(u.muntuzVisitDates)?u.muntuzVisitDates.length:0,
+        funnel:(u.funnel&&typeof u.funnel==='object')?u.funnel:{},
+        entrySource:u.entrySource||'',
+      });
+      const finish = (rows: UserRow[]) => {
         rows.sort((a,b)=>(a.planId==='free'?1:-1)-(b.planId==='free'?1:-1)||b.xp-a.xp);
         // QA S-8: the admin's own account must appear in the Users table.
-        // (Previously the admin email was filtered out here, so searching
-        // for it returned "No users found" even though grant records exist.)
         setUsers(rows);
-      } catch(e) { console.error(e); }
+      };
+      // 1) Server API (Admin SDK — not blocked by client rules)
+      try {
+        const token = await user.getIdToken();
+        const res = await fetch('/api/admin/users', { headers: { Authorization: `Bearer ${token}` }, cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json() as {
+          users: Array<Record<string, any>>;
+          authTotal: number | null;
+          authWithoutProfile: { uid: string; email: string; createdAt: string }[];
+        };
+        finish(data.users.map(u => ({
+          ...toRow(u, String(u.uid), { planId: u.planId, status: u.planStatus, currentPeriodEnd: u.expiry }),
+          // server already reduced these to counts
+          lessonsDone: Number(u.completedLessons) || 0,
+          muntuzVisitDays: Number(u.muntuzVisitDays) || 0,
+        })));
+        setAuthTotal(typeof data.authTotal === 'number' ? data.authTotal : null);
+        setAuthOnly(Array.isArray(data.authWithoutProfile) ? data.authWithoutProfile : []);
+        setFetching(false);
+        return;
+      } catch (e) {
+        console.warn('[admin] /api/admin/users failed, falling back to client read:', e);
+      }
+      // 2) Fallback: browser read (works only when the live rules allow this account)
+      try {
+        const snap = await getDocs(collection(db, 'users'));
+        // QA S-6: 구독 조회를 병렬로 한 번에 조회한다.
+        const rows: UserRow[] = await Promise.all(snap.docs.map(async (d) => {
+          let sub: Record<string, any> | undefined;
+          try {
+            const s2 = await getDoc(doc(db,'subscriptions',d.id));
+            if (s2.exists()) sub = s2.data();
+          } catch {}
+          return toRow(d.data(), d.id, sub);
+        }));
+        finish(rows);
+      } catch(e) {
+        console.error(e);
+        setUsers([]);
+        setUsersError((e as { code?: string }).code === 'permission-denied'
+          ? `Could not load users: this account (${user.email}) is not allowed to read user data. Try again later or sign in with the other admin account.`
+          : 'Could not load users. Please refresh the page.');
+      }
       setFetching(false);
     })();
   }, [user]);
@@ -423,6 +459,19 @@ export default function AdminPage() {
 
       <div style={{maxWidth:1080,margin:'0 auto',padding:'28px 20px 48px'}}>
 
+        {usersError && (
+          <div role="alert" style={{...CARD,padding:'14px 18px',marginBottom:16,background:'#FEF3C7',borderColor:'#FCD34D',color:'#92400E',fontSize:13,fontWeight:800}}>
+            {usersError}
+          </div>
+        )}
+        {authTotal!==null && (
+          <div style={{...CARD,padding:'12px 18px',marginBottom:16,fontSize:12,color:'#475569',fontWeight:700}}>
+            Sign-in accounts (Firebase Auth, MunTalk + Muntuz shared): <b style={{color:'#0F172A'}}>{authTotal}</b>
+            {' · '}with a profile: <b style={{color:'#0F172A'}}>{users.length}</b>
+            {authOnly.length>0 && <> · without a profile: <b style={{color:'#B45309'}}>{authOnly.length}</b> ({authOnly.slice(0,5).map(a=>a.email||a.uid.slice(0,8)).join(', ')}{authOnly.length>5?', …':''})</>}
+          </div>
+        )}
+
         {/* Stats */}
         <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:24}}>
           {(['free','monthly','biannual','annual'] as PlanId[]).map(p=>(
@@ -472,7 +521,7 @@ export default function AdminPage() {
                 const cohort = cohortFor(days);
                 return (
                   <div key={days} style={{marginBottom:14}}>
-                    <div style={{fontSize:11,fontWeight:900,color:'#64748B',letterSpacing:1,textTransform:'uppercase',marginBottom:8}}>Joined in last {days} days · {cohort.length} users</div>
+                    <div style={{fontSize:11,fontWeight:900,color:'#64748B',letterSpacing:1,textTransform:'uppercase',marginBottom:8}}>Joined in last {days} days (since {VISIT_TRACKING_START}) · {cohort.length} users</div>
                     <div style={{display:'flex',flexWrap:'wrap',gap:8}}>
                       {STEPS.map(st=>{
                         const n = cohort.filter(st.test).length;
