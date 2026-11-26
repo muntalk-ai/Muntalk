@@ -17,7 +17,7 @@ const REASON_CONFIG: Record<PaywallReason, { emoji: string; title: string; subti
   level_locked: {
     emoji: '🔒',
     title: 'Unlock All Levels',
-    subtitle: 'You\'ve completed A1! Upgrade to continue your journey to fluency.',
+    subtitle: 'You\'ve completed A2! Upgrade to continue your journey to fluency.',
   },
   no_hearts: {
     emoji: '💔',
@@ -74,7 +74,7 @@ export default function PaywallModal({ reason, onClose, levelName }: PaywallModa
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginBottom: 20, fontSize: 12 }}>
             <div style={{ background: '#F8FAFC', borderRadius: 12, padding: '14px' }}>
               <div style={{ fontWeight: 900, color: '#94A3B8', marginBottom: 8 }}>🆓 Free</div>
-              {['A1 only (12 lessons)', 'AI chat: 3×/day', '5 hearts/day', 'Basic streak'].map(f => (
+              {['A1 + A2 (24 lessons)', 'AI chat: 3×/day', '5 hearts/day', 'Basic streak'].map(f => (
                 <div key={f} style={{ color: '#64748B', marginBottom: 4 }}>✓ {f}</div>
               ))}
             </div>

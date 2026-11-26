@@ -113,6 +113,9 @@ export interface UserProfile {
   placementDone?:  boolean;
   placementLevel?: string;
   placementTrack?: string;
+  // 'self' = 자기 레벨 선택(Starter 완료 화면), 'test' = 레벨 테스트.
+  // 자기 선택은 placementDone을 만들지 않아 테스트가 나중에 올려줄 수 있다.
+  placementSource?: 'self' | 'test';
   // 구독 캐시 (Stripe 웹훅·관리자 Grant가 users 문서에도 함께 씀 —
   // /profile이 이 값을 보여준다. QA S-3: subscriptions 문서와 달라질
   // 수 있어 게이팅은 양쪽을 함께 본다)
@@ -299,12 +302,13 @@ export async function migrateFromLocalStorage(uid: string) {
   const placementLevel = lpGetAs('mt_placement_level', uid);
   const placementTrack = lpGetAs('mt_track', uid);
   const placementDone  = lpGetAs('mt_placement_done', uid) === 'true';
+  const placementSource = lpGetAs('mt_placement_source', uid);
 
   // QA S-5: 게스트가 언어만 고르고 XP/레슨이 없으면 위 조건이 전부 false라
   // 언어 선택이 Firestore로 이관되지 않고 프로필은 시드 기본값('en-US')인 채로
   // 남았다. 언어 선택 자체도 이관 조건에 포함한다.
   const hasLangChoice = !!lpGetAs('mt_learn_lang', uid) || !!lpGetAs('mt_native_lang', uid);
-  if (xp || done.length || dates.length || placementLevel || placementTrack || placementDone || hasLangChoice) {
+  if (xp || done.length || dates.length || placementLevel || placementTrack || placementDone || placementSource || hasLangChoice) {
     // PR-H: XP는 서버 엔드포인트로만 지급 — updateUserProfile로 xp 직접 쓰기 금지.
     // (기존 코드는 게스트 localStorage 값을 그대로 덮어써 조작 벡터였음)
     if (xp > 0) {
@@ -323,6 +327,7 @@ export async function migrateFromLocalStorage(uid: string) {
       ...(placementLevel ? { placementLevel } : {}),
       ...(placementTrack ? { placementTrack } : {}),
       ...(placementDone  ? { placementDone: true } : {}),
+      ...(placementSource === 'self' || placementSource === 'test' ? { placementSource: placementSource as 'self' | 'test' } : {}),
     });
   }
 }

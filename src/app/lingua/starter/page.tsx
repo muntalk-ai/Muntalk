@@ -8,13 +8,14 @@ import { useAuth } from '@/context/AuthContext';
 import { TUTORS, getTutorById, getTutorForLang } from '@/data/tutors';
 import { hasTts } from '@/data/languages';
 import { speakWithDeviceTts, deviceHasVoiceFor } from '@/lib/deviceTts';
-import { updateUserProfile, getUserProfile, recordActivity, resolveLearnLang, resolveNativeLang } from '@/lib/userProfile';
+import { updateUserProfile, getUserProfile, recordActivity, resolveLearnLang, resolveNativeLang, localDateKey } from '@/lib/userProfile';
 import { awardXpWithRetry } from '@/lib/xpClient';
 import { PURPOSE_OPTIONS, purposePromptBlock, mapTrackToPurpose, isLearningPurpose } from '@/lib/purpose';
 import type { LearningPurpose } from '@/lib/purpose';
 import MicGuide, { type MicGuideReason } from '@/components/MicGuide';
 import RtlDir from '@/components/RtlDir';
 import { addCardToSRS } from '@/lib/spacedRepetition';
+import SaveProgressCard from '@/components/SaveProgressCard';
 import { lpGet, lpGetInt, lpGetJson, lpSet } from '@/lib/localProgress';
 
 // ─── Unit Data ───────────────────────────────────────────────────────────────
@@ -188,6 +189,10 @@ function StarterContent() {
   const awardedStarterXpRef = useRef(0);
   const starterXpSavedUnitRef = useRef(0);
   const [unitXpEarned, setUnitXpEarned] = useState(0);
+  // 게스트 스트릭 표시용 (완료 시점의 연속일) + 자기 레벨 선택 상태 (2026-11-26)
+  const [guestStreakDays, setGuestStreakDays] = useState(0);
+  const [selfPlacedLevel, setSelfPlacedLevel] = useState('');
+  const [selfPlaceDismissed, setSelfPlaceDismissed] = useState(false);
 
   // ── B-11 학습 목적 (Goal) ──────────────────────────────────────────────────
   // profile.purpose (Firestore) > localStorage 'mt_purpose' 순으로 확인.
@@ -224,6 +229,15 @@ function StarterContent() {
   // Placement 이수자: placementTrack → 목적 자동 매핑 제안 (강제 저장 아님)
   const suggestedPurpose = mapTrackToPurpose(profile?.placementTrack);
 
+  // 게스트 첫 방문 기록 (PR A 퍼널용) — entry source + Starter 시작, 한 번만.
+  useEffect(() => {
+    if (authLoading || user) return;
+    try {
+      if (!localStorage.getItem('mt_entry_source')) localStorage.setItem('mt_entry_source', 'starter');
+      if (!localStorage.getItem('mt_guest_starter_started_at')) localStorage.setItem('mt_guest_starter_started_at', new Date().toISOString());
+    } catch { /* ignore */ }
+  }, [authLoading, user]);
+
   const selectPurpose = useCallback(async (p: LearningPurpose | null) => {
     const today = new Date().toISOString().slice(0, 10);
     if (p) {
@@ -249,6 +263,31 @@ function StarterContent() {
     }
     setPhase('lobby');
   }, [user, refreshProfile]);
+
+  // ── 자기 레벨 선택 (2026-11-26, 신규·게스트용) ──────────────────────────
+  // 레벨 테스트 대신 한 번의 탭으로 시작 레벨을 정한다. "Not sure"는 A2
+  // (Free 기본값과 같음). placementDone은 일부러 남기지 않는다 — 레벨
+  // 테스트 권유(배너·잠긴 카드)가 계속 보이고, 테스트가 나중에 더 높은
+  // 레벨로 올려줄 수 있게 한다. placementSource로 테스트 배정과 구분한다.
+  const SELF_LEVELS: { label: string; level: string }[] = [
+    { label: "I'm new to English", level: 'a1' },
+    { label: 'I know some words', level: 'a1' },
+    { label: 'I can have a basic conversation', level: 'a2' },
+    { label: 'I can have everyday conversations', level: 'b1' },
+    { label: "I'm advanced", level: 'b2' },
+    { label: 'Not sure', level: 'a2' },
+  ];
+  const chooseSelfLevel = async (level: string) => {
+    setSelfPlacedLevel(level);
+    try {
+      lpSet('mt_placement_level', level);
+      lpSet('mt_placement_source', 'self');
+      if (user?.uid) {
+        await updateUserProfile(user.uid, { placementLevel: level, placementSource: 'self' });
+        await refreshProfile();
+      }
+    } catch { /* ignore — 저장이 실패해도 완료 화면은 그대로 */ }
+  };
 
   const audioRef   = useRef<HTMLAudioElement|null>(null);
   const speakSeq   = useRef(0); // latest speak() call id — stale fetches never play (no overlap)
@@ -827,6 +866,25 @@ LANGUAGE RULES:
       if (!done.includes(unitId)) {
         done.push(unitId);
         lpSet('mt_done', JSON.stringify(done));
+      }
+    } catch { /* ignore */ }
+    // 스트릭일 기록 — 레슨 페이지 게스트 처리와 같은 방식 (가입 시 이관됨).
+    // 로그인 유저는 아래 recordActivity가 서버에 기록하고, 로컬 날짜는 따라잡기용.
+    try {
+      const today = localDateKey(new Date());
+      const dates = lpGetJson<string[]>('mt_activity_dates', []);
+      if (!dates.includes(today)) {
+        dates.push(today);
+        dates.sort();
+        lpSet('mt_activity_dates', JSON.stringify(dates));
+      }
+      if (!user) {
+        let run = 0;
+        const set = new Set(dates);
+        const cur = new Date();
+        while (set.has(localDateKey(cur))) { run++; cur.setDate(cur.getDate() - 1); }
+        setGuestStreakDays(run);
+        if (!localStorage.getItem('mt_guest_starter_completed_at')) localStorage.setItem('mt_guest_starter_completed_at', new Date().toISOString());
       }
     } catch { /* ignore */ }
     if (!user) return;
@@ -1748,6 +1806,13 @@ LANGUAGE RULES:
       <div style={{ fontSize: 28, fontWeight: 900, color: '#F59E0B',
         marginBottom: 32 }}>+{unitXpEarned || xp} ⭐ XP earned</div>
 
+      {!user && guestStreakDays > 0 && (
+        <div style={{ fontSize: 15, fontWeight: 800, color: '#EA580C',
+          marginBottom: 28 }}>
+          🔥 Day {guestStreakDays} streak — come back tomorrow to keep it going!
+        </div>
+      )}
+
       {/* Words learned */}
       <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap',
         justifyContent: 'center', marginBottom: 16, maxWidth: 360 }}>
@@ -1768,15 +1833,50 @@ LANGUAGE RULES:
         </div>
       )}
 
+      {/* 자기 레벨 선택 (2026-11-26): 신규·게스트, 레벨 미배정일 때만 */}
+      {params.get('onboarding') === '1' && !selfPlacedLevel && !selfPlaceDismissed && !(profile?.placementLevel || lpGet('mt_placement_level')) && (
+        <div style={{ background: 'white', border: '2px solid #6366F140',
+          borderRadius: 18, padding: '20px', marginBottom: 16, maxWidth: 360 }}>
+          <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A',
+            marginBottom: 6 }}>How much English do you know?</div>
+          <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.6,
+            marginBottom: 16 }}>
+            Pick the one that sounds most like you. You can change it later with the level test.
+          </div>
+          {SELF_LEVELS.map(o => (
+            <button key={o.label} onClick={() => chooseSelfLevel(o.level)}
+              style={{ ...btnBase, width: '100%', padding: '12px', fontSize: 14,
+                background: 'white', color: '#0F172A',
+                border: '1.5px solid #E2E8F0', marginBottom: 8, textAlign: 'left' }}>
+              {o.label}
+            </button>
+          ))}
+          <button onClick={() => setSelfPlaceDismissed(true)}
+            style={{ background: 'none', border: 'none', color: '#94A3B8',
+              fontSize: 12, fontWeight: 700, cursor: 'pointer', marginTop: 4 }}>
+            Not now
+          </button>
+        </div>
+      )}
+      {selfPlacedLevel && (
+        <div style={{ fontSize: 13, fontWeight: 700, color: '#10B981',
+          marginBottom: 16 }}>
+          ✓ You&apos;re set to {selfPlacedLevel.toUpperCase()}! Take the test to unlock higher levels.
+        </div>
+      )}
+
+      {/* 게스트: 진도 저장 카드 (Create account / Later, 같은 크기) */}
+      {!user && <SaveProgressCard />}
+
       {/* 가입 직후 첫 레슨 완료 → 레벨 테스트 권유 (건너뛰기 가능, 2026-11-26) */}
-      {params.get('onboarding') === '1' && (
+      {params.get('onboarding') === '1' && user && (
         <div style={{ background: 'white', border: '2px solid #6366F140',
           borderRadius: 18, padding: '20px', marginBottom: 16, maxWidth: 360 }}>
           <div style={{ fontSize: 15, fontWeight: 900, color: '#0F172A',
             marginBottom: 6 }}>Your first lesson is done!</div>
           <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.6,
             marginBottom: 16 }}>
-            Take a short level test so your next lessons fit you.
+            Take the test to unlock higher levels.
           </div>
           <div style={{ display: 'flex', gap: 10, justifyContent: 'center',
             flexWrap: 'wrap' }}>

@@ -124,7 +124,7 @@ export function effectivePlanId(
 }
 
 // --- 레벨 잠금 --------------------------------------------------------------
-// Free: A1만 해금, Premium: 전체 해금
+// Free: A1·A2 해금 (2026-11-26: 기존 A1만 → A1·A2, 기존 회원 포함), Premium: 전체 해금
 export function isLevelLocked(levelId: string, planId: PlanId, isAdmin = false, placementLevel?: string): boolean {
   // 관리자는 모든 레벨 접근 가능
   if (isAdmin) return false;
@@ -140,8 +140,8 @@ export function isLevelLocked(levelId: string, planId: PlanId, isAdmin = false, 
     if (placedIdx >= 0 && targetIdx >= 0 && targetIdx <= placedIdx) return false;
   }
 
-  // Free 기본: A1만 허용
-  return levelId !== 'a1';
+  // Free 기본: A1·A2 허용 (2026-11-26 베이스라인 — 기존 회원 포함)
+  return levelId !== 'a1' && levelId !== 'a2';
 }
 
 export function isLessonLocked(levelId: string, planId: PlanId): boolean {

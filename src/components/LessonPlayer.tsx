@@ -1588,7 +1588,7 @@ RULES:
                   Great job! Ready for more?
                 </div>
                 <div style={{ fontSize: 13, color: '#475569', lineHeight: 1.6, marginBottom: 16 }}>
-                  Sign up free to unlock all A1 lessons and track your progress!
+                  Sign up free to unlock all A1 and A2 lessons and track your progress!
                 </div>
                 <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
                   <button

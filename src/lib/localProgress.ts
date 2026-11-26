@@ -30,6 +30,7 @@ export const SCOPED_PROGRESS_KEYS = new Set([
   'mt_placement_level',
   'mt_track',
   'mt_placement_done',
+  'mt_placement_source',
   'mt_migrated_xp',
   'mt_lang_chosen',
 ]);
