@@ -7,6 +7,7 @@ import {
 import { db } from '@/lib/firebase';
 import { useAuth } from '@/context/AuthContext';
 import { isAdminEmail } from '@/lib/subscription';
+import { apiFetch } from '@/lib/apiClient';
 
 // ── Muntuz Exchange admin — /exchange/admin ────────────────────────────────
 // Direct URL only (not linked from navigation). Admin-only: the admin email
@@ -17,7 +18,20 @@ import { isAdminEmail } from '@/lib/subscription';
 // don't store them, and birthdate lives in an owner-only subcollection
 // (exchange_profiles/{uid}/private/identity) that this page cannot read.
 
-type AdminTab = 'dashboard' | 'users' | 'reports' | 'waitlist';
+type AdminTab = 'dashboard' | 'ai' | 'users' | 'reports' | 'waitlist';
+
+type AiDayRow = {
+  day: string;
+  messages: number;
+  messagesUser: number;
+  messagesGuest: number;
+  messagesMuntuz: number;
+  newChats: number;
+  newChatsUser: number;
+  newChatsGuest: number;
+  uniqueUsers: number;
+  uniqueGuests: number;
+};
 
 type ProfileStatus = 'active' | 'paused' | 'banned';
 interface ProfileRow {
@@ -105,6 +119,7 @@ const STATUS_STYLE: Record<ProfileStatus, string> = {
 
 const TABS: { id: AdminTab; label: string }[] = [
   { id: 'dashboard', label: 'Dashboard' },
+  { id: 'ai', label: 'AI chats' },
   { id: 'users', label: 'Users' },
   { id: 'reports', label: 'Reports' },
   { id: 'waitlist', label: 'Waitlist' },
@@ -125,6 +140,10 @@ export default function ExchangeAdminPage() {
   const [actionError, setActionError] = useState('');
   const [actionBusy, setActionBusy] = useState<string | null>(null);
   const [toast, setToast] = useState('');
+  const [aiDays, setAiDays] = useState<AiDayRow[]>([]);
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiError, setAiError] = useState('');
+  const [aiLoaded, setAiLoaded] = useState(false);
 
   const [userSearch, setUserSearch] = useState('');
   const [userStatusFilter, setUserStatusFilter] = useState<'all' | ProfileStatus>('all');
@@ -327,6 +346,33 @@ export default function ExchangeAdminPage() {
     await setReportStatus(report.id, 'resolved');
   };
 
+  // AI chat counts come from a server route (admin SDK), not a client
+  // Firestore read, so no console rule is needed.
+  useEffect(() => {
+    if (!isAdmin || tab !== 'ai' || aiLoaded) return;
+    let cancelled = false;
+    setAiLoading(true);
+    setAiError('');
+    apiFetch('/api/exchange-ai-stats', { timeoutMs: 15000 })
+      .then(async (res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = (await res.json()) as { days?: AiDayRow[] };
+        if (!cancelled) {
+          setAiDays(Array.isArray(data.days) ? data.days : []);
+          setAiLoaded(true);
+        }
+      })
+      .catch((e) => {
+        if (!cancelled) setAiError(`Could not load AI chat counts (${(e as Error).message}).`);
+      })
+      .finally(() => {
+        if (!cancelled) setAiLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [isAdmin, tab, aiLoaded]);
+
   if (authLoading) {
     return (
       <main className="mx-auto max-w-5xl px-4 py-10">
@@ -456,6 +502,69 @@ export default function ExchangeAdminPage() {
             <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800">
               {reportsError}
             </p>
+          )}
+        </section>
+      )}
+
+      {tab === 'ai' && (
+        <section>
+          <p className="mt-4 text-sm text-slate-500">
+            Successful AI partner replies, counted on the server (Vancouver time). Counting started when this
+            feature was deployed — earlier days show 0. No message text is stored.
+          </p>
+          {aiLoading && <p className="mt-4 text-sm text-slate-500">Loading…</p>}
+          {aiError && (
+            <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-800">
+              {aiError}
+            </p>
+          )}
+          {aiDays.length > 0 && (
+            <>
+              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {[
+                  { label: 'AI messages today', value: aiDays[0].messages },
+                  { label: 'New chats today', value: aiDays[0].newChats },
+                  { label: 'Signed-in users today', value: aiDays[0].uniqueUsers },
+                  { label: 'Guests today', value: aiDays[0].uniqueGuests },
+                ].map((s) => (
+                  <div key={s.label} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                    <p className="text-2xl font-extrabold">{s.value}</p>
+                    <p className="mt-1 text-xs font-semibold text-slate-500">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+              <h2 className="mt-6 text-base font-extrabold">Last 14 days</h2>
+              <div className="mt-3 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <table className="w-full min-w-[560px] text-left text-xs">
+                  <thead className="bg-slate-50 text-slate-500">
+                    <tr>
+                      <th className="px-3 py-2 font-bold">Day</th>
+                      <th className="px-3 py-2 font-bold">Messages (user / guest)</th>
+                      <th className="px-3 py-2 font-bold">On muntuz.com</th>
+                      <th className="px-3 py-2 font-bold">New chats (user / guest)</th>
+                      <th className="px-3 py-2 font-bold">Unique users / guests</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {aiDays.map((d) => (
+                      <tr key={d.day} className="border-t border-slate-100">
+                        <td className="px-3 py-2 font-semibold">{d.day}</td>
+                        <td className="px-3 py-2">
+                          {d.messages} ({d.messagesUser} / {d.messagesGuest})
+                        </td>
+                        <td className="px-3 py-2">{d.messagesMuntuz}</td>
+                        <td className="px-3 py-2">
+                          {d.newChats} ({d.newChatsUser} / {d.newChatsGuest})
+                        </td>
+                        <td className="px-3 py-2">
+                          {d.uniqueUsers} / {d.uniqueGuests}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </>
           )}
         </section>
       )}
