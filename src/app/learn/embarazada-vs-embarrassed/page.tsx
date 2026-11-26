@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '"Estoy embarazada" Means "I\'m Pregnant," Not "I\'m Embarrassed"',
+  title: "Embarazada Meaning: Pregnant, Not Embarrassed — Spanish False Friend",
   description:
-    'The classic Spanish-English false friend: embarazada means pregnant, not embarrassed. If you are embarrassed, say "I\'m embarrassed."',
+    "What does embarazada mean? In Spanish, \"Estoy embarazada\" means \"I'm pregnant,\" not \"I'm embarrassed.\" Here's how to say embarrassed in Spanish and English.",
   alternates: { canonical: '/learn/embarazada-vs-embarrassed' },
 };
 

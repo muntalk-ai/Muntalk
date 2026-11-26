@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '컨닝 페이퍼 영어는 "cunning paper"가 아닙니다 — cheat sheet',
+  title: "커닝페이퍼 영어로? — \"cunning paper\"가 아니라 \"cheat sheet\"입니다",
   description:
-    '"cunning paper"는 "교활한 종이"라는 뜻이 됩니다. 컨닝 페이퍼, 시험 요약본의 영어는 cheat sheet입니다.',
+    "컨닝페이퍼·커닝페이퍼를 영어로 \"cunning paper\"라고 하면 \"교활한 종이\"가 됩니다. 시험 커닝 쪽지와 요약본은 영어로 cheat sheet입니다.",
   alternates: { canonical: '/learn/cheat-sheet-not-cunning-paper' },
 };
 

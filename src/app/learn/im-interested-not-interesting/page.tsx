@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '"I\'m interesting"이 아니라 "I\'m interested"입니다 — 관심 있어요 영어로',
+  title: "관심 있어요 영어로 — \"I'm interesting\"이 아니라 \"I'm interested in\"입니다",
   description:
-    '"I\'m interesting"이라고 하면 "나는 재미있는 사람"이 됩니다. 관심이 있다는 뜻은 I\'m interested입니다. 1화 bored/boring 규칙의 2탄입니다.',
+    "\"관심 있어요\"를 \"I'm interesting\"이라고 하면 \"나는 흥미로운 사람\"이 됩니다. 관심이 있다는 뜻은 I'm interested in ~. interested in 구문과 예문을 정리했습니다.",
   alternates: { canonical: '/learn/im-interested-not-interesting' },
 };
 

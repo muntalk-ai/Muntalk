@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '응원할 때 "Fighting!"은 틀렸습니다 — Go for it!',
+  title: "파이팅·화이팅 영어로? — \"Fighting!\"이 아니라 \"Go for it!\"입니다",
   description:
-    '"Fighting!"은 원어민에겐 "싸워라!"라는 명령으로 들립니다. 영어로 응원할 때는 Go for it!, You\'ve got this!, Good luck!을 씁니다.',
+    "응원할 때 \"Fighting!\"이라고 하면 원어민에겐 \"싸워라!\"로 들립니다. 파이팅·화이팅은 영어로 Go for it!, You've got this!, Good luck!이라고 말합니다.",
   alternates: { canonical: '/learn/go-for-it-not-fighting' },
 };
 

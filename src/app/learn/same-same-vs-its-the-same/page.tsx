@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import ArticleShell, { Card, SectionTitle, Body, Quote, BulletList } from '../article-shell';
 
 export const metadata: Metadata = {
-  title: '"Same Same" Is Tinglish, Not English — Say "It\'s the Same"',
+  title: "What Does \"Same Same\" Mean? — Thai English vs. \"It's the Same\"",
   description:
-    '"Same same" comes from Thai เหมือนกัน (same) and is understood in Thailand, but it is not standard English. The standard phrase is "It\'s the same."',
+    "\"Same same\" (and \"same same but different\") is Thai-style English from เหมือนกัน (same). It's understood in Thailand but isn't standard English. The standard phrase is \"It's the same.\"",
   alternates: { canonical: '/learn/same-same-vs-its-the-same' },
 };
 
